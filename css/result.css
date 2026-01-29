@@ -1,12 +1,89 @@
-h1 {
+/* result.css */
 
-    font-size: 50px;
-
-    color: #1F286F;
-
-    letter-spacing: 5px;
-
+/* レイアウト設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    margin: 0;
+    padding: 20px;
 }
-#judge{
-    font-size: 40px;
+
+/* タイトル */
+h1 {
+    color: #003366;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #003366;
+    padding-bottom: 5px;
+}
+
+/* 判定 */
+#judge {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+/* レベル */
+#level {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 出題単語カード */
+h2 {
+    color: #003366;
+    margin-top: 25px;
+}
+
+#wordList {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#wordList li {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* 戻るボタン */
+button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: #00509d;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* 正解・不正解色（JSでclass付与用） */
+.correct {
+    color: #2a9d8f;
+}
+
+.incorrect {
+    color: #e63946;
 }

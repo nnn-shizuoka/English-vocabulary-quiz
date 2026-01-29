@@ -1,23 +1,49 @@
-body{
-    color-scheme: #fff;
-    text-align: center;
-    margin: 10px;
+body {
+    font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
-
-h1{
+h1 {
+    color: #003366; /* N高グループをイメージしたネイビー */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #003366;
+    padding-bottom: 5px;
     font-size: 50px;
     letter-spacing: 5px;
 }
 
-p{
-    font-size: 20px;
 
+p{
+    font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-size: 30px;
+color: #e63946;
     margin: 10px;
+    /* === ここを追加：文字を太くする === */
+    font-weight: bold;
 }
 
-button{
-    color: #1F286F;
-    font-size: 40px;
-    letter-spacing: 0cap;
-    margin-top: 40px;
+.button-group {
+    display: flex;
+    flex-direction: row; /* 横並びにする */
+    gap: 20px;           /* ボタンとボタンの間の隙間 */
+    margin-top: 40px;    /* 説明文との間の距離 */
+}
+
+button {
+    font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #ffffff; /* 画像に合わせて白にするのがおすすめ */
+    color: #003366;
+    font-size: 40px;      /* 横並びにするので少しサイズを調整 */
+    padding: 15px 30px;   /* ボタンの内側に余白を作る */
+    border: 2px solid #003366; /* 枠線をつけるとボタンらしくなります */
+    border-radius: 10px;  /* 角を丸くする */
+    cursor: pointer;
+    font-weight: bold;
 }
