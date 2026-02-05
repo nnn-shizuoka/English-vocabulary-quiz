@@ -1,16 +1,16 @@
 const QUESTIONS = {
   easy: [
-    { question: "水", answer: "water" },
-    { question: "りんご", answer: "apple" },
-    { question: "犬", answer: "dog" },
-    { question: "猫", answer: "cat" },
-    { question: "本", answer: "book" },
-    { question: "学校", answer: "school" },
-    { question: "先生", answer: "teacher" },
-    { question: "友だち", answer: "friend" },
-    { question: "車", answer: "car" },
-    { question: "赤", answer: "red" },
-    { question: "青", answer: "blue" }
+    { question: "メンター", answer: "mentor" },
+    { question: "キャンパス", answer: "campus" },
+    { question: "高校", answer: "high school" },
+    { question: "中学校", answer: "junior high school" },
+    { question: "小学校", answer: "erementary school" },
+    { question: "フォトショップ", answer: "photoshop" },
+    { question: "プレミアプロ", answer: "premierepro" },
+    { question: "スライド", answer: "slide" },
+    { question: "ドキュメント", answer: "document" },
+    { question: "レポート", answer: "report" },
+    { question: "スクーリング", answer: "schooling" }
   ],
   hard: [
     { question: "食べる", answer: "eat" },

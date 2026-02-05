@@ -24,13 +24,19 @@ h1 {
 
 /* タイマーと進捗状況 */
 #timer, #progress {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 5px 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
 }
 
 #timer {
-    color: #e63946; /* 警告色としての赤 */
+    color: #e63939; /* 警告色としての赤 */
 }
 
 /* 問題文（日本語） */

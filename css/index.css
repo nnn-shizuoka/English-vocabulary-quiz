@@ -47,3 +47,9 @@ button {
     cursor: pointer;
     font-weight: bold;
 }
+button  active {
+    transform: translateY(0)
+
+}
+
+
