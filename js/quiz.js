@@ -3,7 +3,7 @@ const params = new URLSearchParams(location.search);
 const level = params.get("level");
 
 if (level !== "easy" && level !== "hard") {
-    location.href = "start.html";
+    location.href = "index.html";
 }
 
 // 出題数・制限時間
