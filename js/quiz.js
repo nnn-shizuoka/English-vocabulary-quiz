@@ -8,7 +8,7 @@ if (level !== "easy" && level !== "hard") {
 
 // 出題数・制限時間
 const totalQuestions = level === "easy" ? 5 : 8;
-const TIME_LIMIT = 10; // 1問の制限時間（秒）
+const TIME_LIMIT = 15; // 1問の制限時間（秒）
 
 // 状態管理
 let currentIndex = 0;
@@ -18,6 +18,8 @@ let playedWords = [];
 
 let timeLeft = TIME_LIMIT;
 let timerId = null;
+
+let isAnswered = false;
 
 // 問題データ初期化
 let words = shuffleArray(QUESTIONS[level]).slice(0, totalQuestions);
@@ -33,6 +35,7 @@ const timerEl = document.getElementById("timer");
 
 // 問題表示
 function showQuestion() {
+    isAnswered = false;
     currentWord = words[currentIndex];
 
     questionEl.textContent = currentWord.question;
@@ -40,17 +43,27 @@ function showQuestion() {
     if (level === "easy") {
         hintEl.textContent = createHint(currentWord.answer);
     } else {
-        hintEl.textContent = "？".repeat(currentWord.answer.length);
+        hintEl.textContent = createHardHint(currentWord.answer);
     }
+
 
     progressEl.textContent = `${currentIndex + 1} / ${totalQuestions}`;
     answerEl.value = "";
+    resultEl.classList.remove("show");
     resultEl.textContent = "";
     answerEl.focus();
 
     clearInterval(timerId);
     startTimer();
 }
+
+function createHardHint(word) {
+    return word
+        .split("")
+        .map(ch => ch === " " ? "⃞" : "？")
+        .join(" ");
+}
+
 
 // タイマー開始
 function startTimer() {
@@ -91,12 +104,17 @@ function timeUp() {
 
 // 回答チェック
 function checkAnswer() {
+    if (isAnswered) return;
     const input = answerEl.value.trim().toLowerCase();
 
     if (input === currentWord.answer.toLowerCase()) {
+        isAnswered = true;
         clearInterval(timerId);
 
         resultEl.textContent = "◯";
+        resultEl.classList.remove("show");
+        void resultEl.offsetWidth;
+        resultEl.classList.add("show");
         correctCount++;
 
         playedWords.push({
@@ -148,11 +166,18 @@ function shuffleArray(array) {
 // 初級用ヒント生成
 function createHint(word) {
     const chars = word.split("");
-    const hint = Array(chars.length).fill("_");
+    const hint = chars.map(ch => ch === " " ? "⃞" : "_");
 
-    const revealCount = Math.max(1, Math.floor(chars.length / 2));
+    const letterIndexes = chars
+        .map((ch, i) => ch !== " " ? i : null)
+        .filter(i => i !== null);
 
-    const indexes = [...chars.keys()]
+    const revealCount = Math.max(
+        1,
+        Math.floor(letterIndexes.length / 2)
+    );
+
+    const indexes = letterIndexes
         .sort(() => Math.random() - 0.5)
         .slice(0, revealCount);
 
