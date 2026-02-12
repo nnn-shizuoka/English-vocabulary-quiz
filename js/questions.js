@@ -22,7 +22,7 @@ const QUESTIONS = {
     { question: "大学", answer: "college" },
     { question: "ロゴやイラストの制作に用いるadobeツール", answer: "illustrator" },
     { question: "TIL", answer: "today I learned" },
-    { question: "TILを記入する際に使用するGoogleのツール", answer: "spreadsheet" },
+    { question: "表計算ができるGoogleのツール", answer: "spreadsheet" },
     { question: "DM", answer: "direct message" },
     { question: "大学", answer: "college" },
     { question: "プロジェクト", answer: "project" },
