@@ -4,6 +4,7 @@ const QUESTIONS = {
     { question: "キャンパス", answer: "campus" },
     { question: "高校", answer: "high school" },
     { question: "中学校", answer: "junior high school" },
+    { question: "小学校", answer: "erementary school" },
     { question: "フォトショップ", answer: "photoshop" },
     { question: "プレミアプロ", answer: "premierepro" },
     { question: "スライド", answer: "slide" },
@@ -13,22 +14,28 @@ const QUESTIONS = {
     { question: "スラック", answer: "slack" },
     { question: "グーグル", answer: "google" },
     { question: "ズーム", answer: "zoom" },
+    { question: "ロビー", answer: "lobby" },
+    { question: "アドビ", answer: "adobe" },
+    { question: "クローム", answer: "chrome" },
+    { question: "ファイル", answer: "file" },
+    { question: "フォルダー", answer: "folder" },
     { question: "スクーリング", answer: "schooling" }
   ],
   hard: [
     { question: "勉強をサポートしてくださる大学生の方々", answer: "teaching assistant" },
-    { question: "パソコン", answer: "perspnal computer" },
+    { question: "パソコン", answer: "personal computer" },
     { question: "VR", answer: "virtual reality" },
     { question: "大学", answer: "college" },
     { question: "ロゴやイラストの制作に用いるadobeツール", answer: "illustrator" },
-    { question: "TIL", answer: "today I learned" },
-    { question: "表計算ができるGoogleのツール", answer: "spreadsheet" },
-    { question: "DM", answer: "direct message" },
-    { question: "大学", answer: "college" },
+    { question: "TIL", answer: "today i learned" },
+    { question: "TILを記入する際に使用するGoogleのツール", answer: "spreadsheet" },
+    { question: "DM", answer: "direct message" },   
     { question: "プロジェクト", answer: "project" },
     { question: "文字のデザインのこと", answer: "font" },
     { question: "IDやパスワードを使用して本人であることを証明すること", answer: "login" },
     { question: "スラックなどのチャットツールで「＠ユーザーネーム」を使用すること", answer: "mention" },
-    { question: "メール、カレンダーなどグーグルのツールの総称", answer: "google work space" }
+    { question: "slack上でやり取りを行う部屋。パブリックとプライベートがある。", answer: "channel" },
+    { question: "slack上の投稿メッセージに返信する機能", answer: "thread" },
+    { question: "メール、カレンダーなどグーグルのツールの総称", answer: "work space" }
   ]
 };
